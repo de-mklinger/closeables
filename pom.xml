@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>de.mklinger.maven</groupId>
+		<artifactId>maven-parent</artifactId>
+		<version>1.10</version>
+	</parent>
+
+	<groupId>de.mklinger.micro</groupId>
+	<artifactId>closeables</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<packaging>bundle</packaging>
+
+	<name>${project.artifactId}</name>
+	<description>Micro library for Closeables</description>
+	<url>https://github.com/de-mklinger/closeables</url>
+	<inceptionYear>2019</inceptionYear>
+
+	<organization>
+		<name>mklinger GmbH</name>
+		<url>http://www.mklinger.de</url>
+	</organization>
+
+	<licenses>
+		<license>
+			<name>Apache License 2.0</name>
+			<url>https://www.apache.org/licenses/LICENSE-2.0</url>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<name>Marc Klinger</name>
+			<email>mklinger[at]mklinger[dot]de</email>
+			<organization>mklinger GmbH</organization>
+			<organizationUrl>https://www.mklinger.de</organizationUrl>
+		</developer>
+	</developers>
+
+	<scm>
+		<connection>scm:git:git@github.com:de-mklinger/closeables.git</connection>
+		<developerConnection>scm:git:git@github.com:de-mklinger/closeables.git</developerConnection>
+		<url>https://github.com/de-mklinger/closeables</url>
+	</scm>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+</project>
