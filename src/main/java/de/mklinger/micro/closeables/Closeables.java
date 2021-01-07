@@ -61,15 +61,13 @@ public class Closeables {
 	public static void closeUnchecked(final AutoCloseable... closeables) {
 		try {
 			close(closeables);
+		} catch (final RuntimeException e) {
+			throw e;
 		} catch (final Exception e) {
-			if (e instanceof RuntimeException) {
-				throw (RuntimeException)e;
-			} else {
-				if (e instanceof InterruptedException) {
-					Thread.currentThread().interrupt();
-				}
-				throw new UncheckedCloseException("Error on close", e);
+			if (e instanceof InterruptedException) {
+				Thread.currentThread().interrupt();
 			}
+			throw new UncheckedCloseException("Error on close", e);
 		}
 	}
 
