@@ -85,7 +85,7 @@ public class Closeables {
 	 *
 	 * @param closeables The closeable instances to close. {@code Null} elements in
 	 *        the list are ignored.
-	 * @throws UncheckedCloseException in case of an error
+	 * @throws Exception in case of an error
 	 */
 	public static void close(final Collection<? extends AutoCloseable> closeables) throws Exception {
 		close(closeables.toArray(new AutoCloseable[closeables.size()]));
@@ -103,7 +103,7 @@ public class Closeables {
 	 *
 	 * @param closeables The closeable instances to close. {@code Null} elements in
 	 *        the array are ignored.
-	 * @throws UncheckedCloseException in case of an error
+	 * @throws Exception in case of an error
 	 */
 	public static void close(final AutoCloseable... closeables) throws Exception {
 		Exception error = null;
